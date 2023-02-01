@@ -28,6 +28,8 @@ const centerImg: React.CSSProperties = {
     animationTimingFunction: 'linear'
 }
 
+
+
 export  function MainColumn(){
     return (
       <div style={mainColumnStyle}>
