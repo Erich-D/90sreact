@@ -22,7 +22,7 @@ const centerImg: React.CSSProperties = {
 export  function MainColumn(){
     return (
       <div style={mainColumnStyle}>
-        <Banner title="90s Greatest Hits"></Banner>
+        <Banner title="90s Greatest Hits" head='yes'></Banner>
         <MainContent></MainContent>
         <Banner title="Mtv Rocks!!"></Banner>
       </div>

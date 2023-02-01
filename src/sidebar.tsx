@@ -1,9 +1,22 @@
+import "./keyframes.css"
+
 const sideBarStyle: React.CSSProperties = {
     width: '15%',
     color: 'antiquewhite',
     border: '1px solid red',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    animationName: "drop",
+    animationDuration: '4s',
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear'
   }
+
+const sliderStyle: React.CSSProperties = {
+    animationName: "drop",
+    animationDuration: '4s',
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear'
+}  
 
 const sideImg: React.CSSProperties = {
     position: 'relative',
@@ -33,9 +46,11 @@ type SideProp = {
 export  function SideBar(props: SideProp) {
     return (
       <div style={sideBarStyle}>
-        {
-        (props.side === 'left') ? lside.map(s => <img style={sideImg} src={s} alt=""/>):rside.map(s => <img style={sideImg} src={s} alt=""/>)
-        }
+        <div style={sliderStyle}>
+            {
+            (props.side === 'left') ? lside.map(s => <img style={sideImg} src={s} alt=""/>):rside.map(s => <img style={sideImg} src={s} alt=""/>)
+            }
+        </div>
       </div>
     );
   }
