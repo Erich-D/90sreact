@@ -4,23 +4,20 @@ const sideBarStyle: React.CSSProperties = {
     width: '15%',
     color: 'antiquewhite',
     border: '1px solid red',
-    overflow: 'hidden',
-    animationName: "drop",
-    animationDuration: '4s',
-    animationIterationCount: 'infinite',
-    animationTimingFunction: 'linear'
+    overflow: 'hidden'
   }
-
-const sliderStyle: React.CSSProperties = {
-    animationName: "drop",
-    animationDuration: '4s',
-    animationIterationCount: 'infinite',
-    animationTimingFunction: 'linear'
-}  
 
 const sideImg: React.CSSProperties = {
     position: 'relative',
-    width: '100%'
+    width: '100%',
+    animationName: "drop",
+    animationDuration: '4s',
+    animationIterationCount: 'infinite',
+    animationTimingFunction: 'linear'
+}
+
+const reverse: React.CSSProperties = {
+    animationDirection: 'reverse'
 }
 
 const lside: string[] = [
@@ -46,9 +43,9 @@ type SideProp = {
 export  function SideBar(props: SideProp) {
     return (
       <div style={sideBarStyle}>
-        <div style={sliderStyle}>
+        <div>
             {
-            (props.side === 'left') ? lside.map(s => <img style={sideImg} src={s} alt=""/>):rside.map(s => <img style={sideImg} src={s} alt=""/>)
+            (props.side === 'left') ? lside.map(s => <img style={sideImg} src={s} alt=""/>):rside.map(s => <img style={{...sideImg, ...reverse}} src={s} alt=""/>)
             }
         </div>
       </div>
