@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/90sreact/static/css/main.69d7530f.css",
-    "main.js": "/90sreact/static/js/main.6789a16f.js",
+    "main.js": "/90sreact/static/js/main.4db1c100.js",
     "index.html": "/90sreact/index.html",
     "main.69d7530f.css.map": "/90sreact/static/css/main.69d7530f.css.map",
-    "main.6789a16f.js.map": "/90sreact/static/js/main.6789a16f.js.map"
+    "main.4db1c100.js.map": "/90sreact/static/js/main.4db1c100.js.map"
   },
   "entrypoints": [
     "static/css/main.69d7530f.css",
-    "static/js/main.6789a16f.js"
+    "static/js/main.4db1c100.js"
   ]
 }
