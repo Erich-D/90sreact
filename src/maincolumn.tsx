@@ -1,27 +1,39 @@
+import { Banner } from "./banner"
 
 const mainColumnStyle: React.CSSProperties = {
     width: '70%',
-    color: 'antiquewhite',
-    border: '1px solid red'
+    color: 'antiquewhite'
 }
 
-const bannerStyle: React.CSSProperties = {
-    backgroundImage: "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fsf970VLyRbZte%2Fgiphy.gif&f=1&nofb=1&ipt=e2e821773dccaa21b92c64ade63c5c6dc3d15918719710ab84457baecec6a219&ipo=images')",
-    fontFamily: "'Creepster', cursive"
+const spinStyle: React.CSSProperties = {
+    borderRadius: '50%',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+}
+
+const centerImg: React.CSSProperties = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
 }
 
 export  function MainColumn(){
     return (
       <div style={mainColumnStyle}>
-        <Banner></Banner>
+        <Banner title="90s Greatest Hits"></Banner>
+        <MainContent></MainContent>
+        <Banner title="Mtv Rocks!!"></Banner>
       </div>
     )
 }
 
-  function Banner(){
-    return (
-      <div style={bannerStyle}>
-        <h1>90s Greatest Hits</h1>
-      </div>
+function MainContent(){
+    return(
+        <div>
+            <img style={spinStyle} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-gHKxG9dJooQ%2FW0kcF3NF1rI%2FAAAAAAAAFeM%2F39-sshtGnBUJWKGZ3MVDmYBl4Dwi0LJagCLcBGAs%2Fs640%2F00.jpg&f=1&nofb=1&ipt=a34b9a01b74771e53b5ced6d1c48ef36694b58592f7801cdc1733168a802103f&ipo=images" alt=""/>
+            <img style={centerImg} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FypMURIDeo1Zzq%2Fgiphy.gif&f=1&nofb=1&ipt=afd58d378dc4cb37cb3b2ec93126d1118864bf05bc4c9898224b8a88089e944d&ipo=images" alt=""></img>
+        </div>
     )
-  }
+}
