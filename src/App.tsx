@@ -1,6 +1,8 @@
 import React from 'react';
-import { MainColumn } from './maincolumn';
+import { Banner } from "./banner";
+import { MainContent } from './maincolumn';
 import { SideBar } from './sidebar';
+
 
 const containerStyle: React.CSSProperties = {
   backgroundImage: "url('https://media.tenor.com/baTfy6sflvAAAAAd/equalizer-music.gif')",
@@ -8,6 +10,11 @@ const containerStyle: React.CSSProperties = {
   backgroundSize: 'cover',
   height: '100vh',
   display: 'flex'  
+}
+
+const mainColumnStyle: React.CSSProperties = {
+  width: '70%',
+  color: 'antiquewhite'
 }
 
 const lside: string[] = [
@@ -26,11 +33,20 @@ const rside: string[] = [
   "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.discogs.com%2FwEIh0Ob_pSVTVTTzcPlNyomVF_M%3D%2Ffit-in%2F600x600%2Ffilters%3Astrip_icc()%3Aformat(jpeg)%3Amode_rgb()%3Aquality(90)%2Fdiscogs-images%2FR-10800661-1504534073-2954.jpeg.jpg&f=1&nofb=1&ipt=eaf3df00b90087538f88035024f74f945a9f557739abbb18ea8bee6836231e21&ipo=images"
 ]
 
+const mImgs: string[] = [
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-gHKxG9dJooQ%2FW0kcF3NF1rI%2FAAAAAAAAFeM%2F39-sshtGnBUJWKGZ3MVDmYBl4Dwi0LJagCLcBGAs%2Fs640%2F00.jpg&f=1&nofb=1&ipt=a34b9a01b74771e53b5ced6d1c48ef36694b58592f7801cdc1733168a802103f&ipo=images",
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FypMURIDeo1Zzq%2Fgiphy.gif&f=1&nofb=1&ipt=afd58d378dc4cb37cb3b2ec93126d1118864bf05bc4c9898224b8a88089e944d&ipo=images"
+]
+
 function App() {
   return (
     <div style={containerStyle}>
       <SideBar side='left' imgs={lside}></SideBar>
-      <MainColumn></MainColumn>
+      <div style={mainColumnStyle}>
+        <Banner title="90s Greatest Hits" head='yes'></Banner>
+        <MainContent spinImg={mImgs[0]} growImg={mImgs[1]}></MainContent>
+        <Banner title="Mtv Rocks!!"></Banner>
+      </div>
       <SideBar side='right' imgs={rside}></SideBar>
     </div>
   );
