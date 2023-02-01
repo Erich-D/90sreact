@@ -15,9 +15,9 @@ const containerStyle: React.CSSProperties = {
 function App() {
   return (
     <div style={containerStyle}>
-      <SideBar></SideBar>
+      <SideBar side='left'></SideBar>
       <MainColumn></MainColumn>
-      <SideBar></SideBar>
+      <SideBar side='right'></SideBar>
     </div>
   );
 }
